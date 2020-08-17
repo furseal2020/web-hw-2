@@ -1,0 +1,49 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Message Board</title>
+</head>
+<body>
+<div class="container">
+  <div class="col-lg-4 offset-lg-2">
+    <div class="h5"><br>EDIT THIS TOPIC</div>
+  </div>
+</div>
+<div class="container">
+  <form Action="message_board_web.html" Method="POST" Enctype="application/x-www-form-urlencoded" OnSubmit="return mySubmit()">
+    <div class="form-group row offset-lg-2 no-gutters">
+      <label for="title" class="col-lg-auto col-form-label font-weight-normal"><br>Title :&nbsp;&nbsp;</label>
+        <div class="col-lg-5">
+          <br><input type="text" class="form-control" id="title" name="title" placeholder="">
+        </div>
+    </div>
+	<div class="form-group row offset-lg-2 no-gutters">
+	  <div class="col-lg-10">
+		<textarea class="form-control" rows="3" id="content" name="content" placeholder="" ></textarea>
+      </div>
+	</div>
+	<div class="form-group row no-gutters">
+      <div class="col-lg-12 text-center">
+	    <br><button class="btn btn-light" type="submit" name="edit_topic" onClick="return myCheck()">EDIT</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="container">
+  <div class="row">
+	<div class="w-100"><br><br><br></div>
+  </div>
+  <div class="btn-group d-flex" role="group">
+    <button type="button" class="btn btn-light w-100" onclick="location.href='http://localhost/web_hw/message_board_web.html'">MESSAGE BOARD</button>
+    <button type="button" class="btn-dark w-100" onclick="location.href='http://localhost/web_hw/login_web.html'">LOG OUT</button>
+  </div><br>
+</div>
+<script src="edit_topic_control.js"></script> 
+</body>
+</html>
